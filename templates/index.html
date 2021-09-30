@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title> FAKE NEWS DETECTION </title>
+
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+	<center> <h1> <p style="color:#C0C0C0;font-family:serif;font-size:35 px;font-style:bold;">FAKE NEWS DETECTION USING MACHINE LEARNING </p> </h1> </center> 
+
+<div class="login">  
+  <p>
+  	<p style="color:#ff0000;font-family:serif;font-size:20 px;font-style:bold;">
+  	ENTER THE NEWS:
+  	<br>
+  	<br>
+  </p>
+  </p>
+
+  <form action="{{ url_for('predict')}}" method="POST">
+    	<input type="text" name="news" placeholder="ENTER THE NEWS" required="required"/>
+    	<br>
+    	<br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">PREDICT</button>
+  </form>
+
+<br>
+   <br>
+   <p style="color:#ff0000;font-family:serif;font-size:20 px;font-style:bold;">
+   {{ prediction_text }}
+ </p>
+
+</div>
+
+<footer> 
+  	<b>Project by: TEAM III-2 </b> <i>Harsh Kumar, Archita Srivastava, Riya Keshri, Rishita Banik</i>
+  </footer>
+
+</body>
+</html>
