@@ -11,9 +11,11 @@ templates: Contains index.html
 
 project.py
 
-app.py
+first.py
 
 Fake News Detection Website.png
 
 news.csv
+
+Fake News Detection.ipynb
 
